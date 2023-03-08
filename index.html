@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>学校用知識共有ポータルサイト</title>
+<head><meta name="viewport" content="width=device-width">
+    <title>八戸工業高等専門学校知識共有ポータルサイト</title>
     <style>
-	h1{font-size: 200%;}
-		
         body {
-            background-color:#fffacd;
+            background-color:#e1ede7;
             font-family: sans-serif;
             font-size: 16px;
             line-height: 1.6;
@@ -19,8 +17,8 @@
              
             
         }
-a:hover{
-background-color:#98fb98;
+    a:hover{
+background-color:#00ff7f;
 }
         
         
@@ -28,31 +26,33 @@ background-color:#98fb98;
         
         
        nav{
-         background-color:#f5f5dc;
+         background-color:#e1ede7;
        }
       
+
+               
         .button {
-            background-color: #e0ffff;
+            background-color: #9bf8f4;
             color: black;
             padding: 15px 25px;
             text-align: center;
             font-size: 16px;
             font-family: sans-serif;
             margin: 5px;
-            border-color:#fffacd;
+            border-color:#77bebb;
             border-radius: 10px;
             box-shadow: 0px 5px 10px rgba(0,0,0,0.25);
             transition: all 0.3s ease 0s;
         }
         .button:hover {
-            background-color: #FFA000;
+            background-color: #00ff7f;
             color: white;
             box-shadow: 0px 10px 15px rgba(0,0,0,0.25);
             transform: translateY(-3px);
         }
        
         .button1{
-           background-color:#e0ffff;
+           background-color:#9bf8f4;
             color: black;
             padding: 15px 15px;
             text-align: center;
@@ -62,18 +62,19 @@ background-color:#98fb98;
             border-radius: 10px;
             box-shadow: 0px 5px 10px rgba(0,0,0,0.25);
             transition: all 0.3s ease 0s;
-            border-color:#fffacd;
+            border-color:#77bebb;
            
           
         }
         .button1:hover {
-            background-color: #FFA000;
+            background-color: #00ff7f;
             color: white;
             box-shadow: 0px 10px 15px rgba(0,0,0,0.25);
             transform: translateY(-3px);
         }
         .button2{
-          background-color:#98fb98;
+          text-decoration:underline;
+          background-color:#ffe186;
             color: black;
             padding: 15px 15px;
             text-align: center;
@@ -83,40 +84,35 @@ background-color:#98fb98;
             border-radius: 10px;
             box-shadow: 0px 5px 10px rgba(0,0,0,0.25);
             transition: all 0.3s ease 0s;
-            border-color:#fffacd;
+            border-color:#cbb36c;
           
         }
         .button2:hover{
-           background-color: #FFA000;
+           background-color: #00ff7f;
             color: white;
             box-shadow: 0px 10px 15px rgba(0,0,0,0.25);
             transform: translateY(-3px);
           
         }
         main{
-          background-color:#fffacd;
+          background-color:#e1ede7;
         }
-	.img{
-		width:50px;
-		
-	}
-
+        
     </style>
 </head>
 <body>
-    <header style="background-color:#f5f5dc;">
-        <h1><img  class="img" src="https://1.bp.blogspot.com/-gARR6ehVBP8/UZB6YR-tXBI/AAAAAAAASCo/fZGPc8JEd6w/s400/search_mushimegane.png" alt="">学校用知識共有ポータルサイト</h1>
-	
-        <nav>
+    <header style="background-color:#e1ede7;">
+        <h1><center>八戸工業高等専門学校</center><center>知識共有ポータルサイト</center></h1>
+        <nav><center>
       <a href="https://example.com">ホーム</a> |
             <a href="URL検索ツール.html">学習リソース</a> | 
             <a href="https://example.com">情報共有</a> | 
             <a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q10105084395">コミュニティ</a>
-        </nav>
+        </center></nav>
     </header>
     <main>
        
-       <p>このサイトは学校で使用する<strong>知識共有用ポータルサイト</strong>です。学習リソース、情報共有、コミュニティなどを簡単にアクセスできます。</p>
+       <p>このサイトは学校で使用する<strong>知識共有ポータルサイト</strong>です。学習リソース、情報共有、コミュニティなどを簡単にアクセスできます。</p>
         <button class="button">自主探求</button>
         <button class="button">質問箱</button>
         <button class="button">待ち時間</button>
@@ -126,11 +122,17 @@ background-color:#98fb98;
         <button class="button">アンケート</button>
   <button class="button2"onclick="text()";>ENGLISH</button>
         
-       
+        
+      
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
         <br>
     </main>
- <footer style="background-color: #98fb98;">
+ <footer style="background-color: #84f6ae;">
     <p >このサイトは学生によって運用されています。ご要望やお問い合わせは</p>
     <address>hikari@.jp</address>
     <p>にお願いします。</p>
@@ -141,22 +143,22 @@ background-color:#98fb98;
     </footer>
     <script>
     let f=1;
- 		function text(){
+   function text(){
     if(f%2!=0){
     var title= document.getElementsByTagName('h1')[0];
     var main=document.getElementsByTagName('p')[0];
     
-   title.innerText="Knowledge Sharing Portal Site for Schools";
+   title.innerHTML="<center>Knowledge Sharing Portal Site for Schools</center>";
    title.style.color="#000000";
   
    for(let i=0;i<4;i++){
    var navi= document.getElementsByTagName('a')[i];
    switch(i){
    
-   case 0:navi.innerText="home";break;
-   case 1:navi.innerText="learning";break;
-   case 2:navi.innerText="Sharing";break;
-   case 3:navi.innerText="comunity";break;
+   case 0:navi.innerHTML="home";break;
+   case 1:navi.innerHTML="learning";break;
+   case 2:navi.innerHTML="Sharing";break;
+   case 3:navi.innerHTML="comunity";break;
    }
    navi.style.color="#000000";
    }
@@ -172,7 +174,7 @@ background-color:#98fb98;
    case 4:but.innerHTML="data";break;
    case 5:but.innerHTML="learnig URL";break;
    case 6:but.innerHTML="survey";break;
-   case 7:but.innerHTML="JAPAN";break
+   case 7:but.innerHTML="日本語";break
       }
        but.style.color="#000000";
   
@@ -182,7 +184,7 @@ background-color:#98fb98;
    var title= document.getElementsByTagName('h1')[0];
     var main=document.getElementsByTagName('p')[0];
     
-   title.innerHTML="学校用知識共有ポータルサイト";
+   title.innerHTML="<center>八戸工業高等専門学校</center><center>知識共有ポータルサイト</center>";
    title.style.color="#000000";
   
    for(let i=0;i<4;i++){
@@ -196,7 +198,7 @@ background-color:#98fb98;
    }
    navi.style.color="#000000";
    }
-  main.innerHTML="このサイトは学校で使用する<strong>知識共有用ポータルサイト</strong>です。学習リソース、情報共有、コミュニティなどを簡単にアクセスできます。"
+  main.innerHTML="このサイトは学校で使用する<strong>知識共有ポータルサイト</strong>です。学習リソース、情報共有、コミュニティなどを簡単にアクセスできます。"
   for(let i=0;i<8;i++){
   var but=document.getElementsByTagName('button')[i];
    switch(i){
@@ -206,7 +208,7 @@ background-color:#98fb98;
    case 2:but.innerHTML="待ち時間";break;
    case 3:but.innerHTML="問題作成";break;
    case 4:but.innerHTML="データ群";break;
-   case 5:but.innerHTML="URL検索";break;
+   case 5:but.innerHTML="学習用URL";break;
    case 6:but.innerHTML="アンケート";break;
    case 7:but.innerHTML="ENGLISH";break
       }
