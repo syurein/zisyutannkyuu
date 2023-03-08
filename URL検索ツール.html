@@ -7,10 +7,10 @@
 
 <style>
 body{
-  background-color:#ffffe0;
+  background-color:#e1ede7;
 }
 h1{
-   background-color:#ffffe0;
+   background-color:#e1ede7;
    font-weight:900;
   
 }
@@ -20,20 +20,17 @@ form{
   font-weight:600;
 }
 .text{
-  background-color:#ffff00;
+  background-color:#efe446;
   
 }
 .text2{
    font-weight:800;
-   text-decoration:underline;
-   
-  
-  
+ 
 }
 .button{
-  background-color:#ffff00;
+  background-color:#efe446;
   border-radius:4px;
-  border-color:#ffff00;
+  border-color:#d3c93e;
 }
 .button1{
    background-color:#adff2f;
@@ -43,8 +40,8 @@ form{
   
 }
 .button2{
-   background-color:#87ceed;
-   border-color:#87ceed;
+   background-color:#4556f0;
+   border-color:#303ca5;
    border-radius:4px;
    
   
@@ -56,10 +53,13 @@ form{
 
 
 </style>
-    <h1>学習用URL推薦サイト</h1>
-    <p>あなたに<strong class="text">おすすめの学習サイト</strong>を紹介します。</p>
+    <h1><center>学習用URL推薦サイト</center></h1>
+    <p><center>あなたに<strong class="text">おすすめの学習サイト</strong>を紹介します。</center></p>
+    <br>
+    <p>学習したいことを選択/検索できます。</p>
     <form action="">
-<p>あなたの<strong class="text2">興味のあるもの</strong>を選択してください。</p>
+    
+<p>あなたの<strong class="text2">興味のあるもの</strong>にチェックしてください。</p>
 <input type="checkbox" name="genre" value="etc">検索BOX：<input type="text" name="text">
 <br>
 <input type="checkbox" name="genre" value="プログラミング">プログラミング
@@ -73,7 +73,8 @@ form{
         <input type="checkbox" name="genre" value="過去問">過去問
 
      <input type="checkbox" name="genre" value="一覧">一覧
-     <input type="checkbox" name="genre" value="シラバス">シラバス　　　　
+     <input type="checkbox" name="genre" value="シラバス">シラバス
+     <input type="checkbox" name="genre" value="体験談">体験談
     <br>
     
         
@@ -86,10 +87,7 @@ form{
     <script>
     var links="";
        function btnPush(){
-       
- window.open(links)
-			
-       
+				location.href=links;
       }
         
      function recomend(){
@@ -116,7 +114,18 @@ form{
     
      case "シラバス":msg+="シラバス"; links="https://syllabus.kosen-k.go.jp/Pages/PublicDepartments?school_id=05&lang=ja";
      break;
-     default:alert("そのジャンルのものはまだ追加されていません。申し訳ありません。");break;
+     case "八戸高専":msg+="八戸工業高等専門学校"; links="https://www.hachinohe-ct.ac.jp/";
+     break;
+     case "体験談":msg+="かっつー、ナレッジスター";links="https://m.youtube.com/channel/UC_MTz4eFIPt2ihuqFk8tMqQ";
+     break;
+     case "数学":msg+="ヨビノリ";links="https://youtube.com/@yobinori";
+     break;
+     case "高専":msg+="みんなの高専チャンネル";links="https://youtube.com/@kosen-channel";
+     break;
+     case "英検":msg+="英検";links="https://www.eiken.or.jp/eiken/";
+     break;
+     default:alert("そのジャンルのものはまだ追加されていません。申し訳ありません。");
+     break;
      
     
      
@@ -130,22 +139,25 @@ form{
             let recommendBooks = {
                 プログラミング: 'progate',
                 自主探求: '自主探求検索ツール',
-                過去問: '過去問共有サイト',
+                過去問: '『過去問』',
                 進路:'卒業生がふりかえる〜進路編〜',
                 一覧:'',
                 シラバス:'WEBシラバス',
-                研究:'国立高専情報共有ポータル'
+                研究:'国立高専情報共有ポータル',
+                体験談:'かっつーのユーチューブチャンネル',
             
             
                 
             };
- 
-       
+            let tex=document.getElementsByName('text')[0].value;
+            
+            
+            
+          
             let msg = 'あなたにおすすめのサイトは、<strong>';
             for (let genre of selectedGenres) {
                 msg += recommendBooks[genre.value] + '、';
             }
-            
             
             msg += '</strong>です！';
          
