@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+　　<meta name="viewport" content="width=device-width">
     <title>学習用URL推薦サイト</title>
 </head>
 <body>
@@ -35,15 +36,15 @@ form{
 .button1{
    background-color:#adff2f;
    border-color:#adff2f;
-   border-radius:4px;
+   border-radius:10px;
    
   
 }
 .button2{
-   background-color:#4556f0;
-   border-color:#303ca5;
+   background-color:#00ff7f;
+   border-color:#00ff7f;
    border-radius:4px;
-   
+  
   
 }
 
@@ -56,7 +57,7 @@ form{
     <h1><center>学習用URL推薦サイト</center></h1>
     <p><center>あなたに<strong class="text">おすすめの学習サイト</strong>を紹介します。</center></p>
     <br>
-    <p>学習したいことを選択/検索できます。</p>
+    <p>学習したいことを<strong>選択/検索</strong>できます。</p>
     <form action="">
     
 <p>あなたの<strong class="text2">興味のあるもの</strong>にチェックしてください。</p>
@@ -87,7 +88,7 @@ form{
     <script>
     var links="";
        function btnPush(){
-				location.href=links;
+    location.href=links;
       }
         
      function recomend(){
@@ -103,7 +104,7 @@ form{
           
      switch(tex){
      case "プログラミング": msg+="progete";links="https://prog-8.com/dashboard";
-     			break;
+        break;
     
      case "進路":msg+="卒業生がふりかえる〜進路編〜";links="https://moniponbear.com/kosen_sinro/286/";
      break;
