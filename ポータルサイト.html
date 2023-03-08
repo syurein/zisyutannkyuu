@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>学校用知識共有ポータルサイト</title>
+    <style>
+        body {
+            background-color:#fffacd;
+            font-family: sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            
+        }
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #000000;
+             
+            
+        }
+a:hover{
+background-color:#98fb98;
+}
+        
+        
+       
+        
+        
+       nav{
+         background-color:#f5f5dc;
+       }
+      
+        .button {
+            background-color: #e0ffff;
+            color: black;
+            padding: 15px 25px;
+            text-align: center;
+            font-size: 16px;
+            font-family: sans-serif;
+            margin: 5px;
+            border-color:#fffacd;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.25);
+            transition: all 0.3s ease 0s;
+        }
+        .button:hover {
+            background-color: #FFA000;
+            color: white;
+            box-shadow: 0px 10px 15px rgba(0,0,0,0.25);
+            transform: translateY(-3px);
+        }
+       
+        .button1{
+           background-color:#e0ffff;
+            color: black;
+            padding: 15px 15px;
+            text-align: center;
+            font-size: 16px;
+            font-family: sans-serif;
+            margin: 5px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.25);
+            transition: all 0.3s ease 0s;
+            border-color:#fffacd;
+           
+          
+        }
+        .button1:hover {
+            background-color: #FFA000;
+            color: white;
+            box-shadow: 0px 10px 15px rgba(0,0,0,0.25);
+            transform: translateY(-3px);
+        }
+        .button2{
+          background-color:#98fb98;
+            color: black;
+            padding: 15px 15px;
+            text-align: center;
+            font-size: 16px;
+            font-family: sans-serif;
+            margin: 5px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.25);
+            transition: all 0.3s ease 0s;
+            border-color:#fffacd;
+          
+        }
+        .button2:hover{
+           background-color: #FFA000;
+            color: white;
+            box-shadow: 0px 10px 15px rgba(0,0,0,0.25);
+            transform: translateY(-3px);
+          
+        }
+        main{
+          background-color:#fffacd;
+        }
+        
+    </style>
+</head>
+<body>
+    <header style="background-color:#f5f5dc;">
+        <h1>学校用知識共有ポータルサイト</h1>
+        <nav>
+      <a href="https://example.com">ホーム</a> |
+            <a href="https://example.com">学習リソース</a> | 
+            <a href="https://example.com">情報共有</a> | 
+            <a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q10105084395">コミュニティ</a>
+        </nav>
+    </header>
+    <main>
+       
+       <p>このサイトは学校で使用する<strong>知識共有用ポータルサイト</strong>です。学習リソース、情報共有、コミュニティなどを簡単にアクセスできます。</p>
+        <button class="button">自主探求</button>
+        <button class="button">質問箱</button>
+        <button class="button">待ち時間</button>
+        <button class="button">問題作成</button>
+        <button class="button">データ群</button>
+        <button class="button1">学習用URL</button>
+        <button class="button">アンケート</button>
+  <button class="button2"onclick="text()";>ENGLISH</button>
+        
+        <button class="button">test</button>
+        <button class="button">test</button>
+        <button class="button">test</button>
+        <button class="button">test</button>
+        <button class="button1">test</button>
+       <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </main>
+ <footer style="background-color: #98fb98;">
+    <p >このサイトは学生によって運用されています。ご要望やお問い合わせは</p>
+    <address>hikari@.jp</address>
+    <p>にお願いします。</p>
+    
+    
+      
+      
+    </footer>
+    <script>
+    let f=1;
+ 		function text(){
+    if(f%2!=0){
+    var title= document.getElementsByTagName('h1')[0];
+    var main=document.getElementsByTagName('p')[0];
+    
+   title.innerHTML="Knowledge Sharing Portal Site for Schools";
+   title.style.color="#000000";
+  
+   for(let i=0;i<4;i++){
+   var navi= document.getElementsByTagName('a')[i];
+   switch(i){
+   
+   case 0:navi.innerHTML="home";break;
+   case 1:navi.innerHTML="learning";break;
+   case 2:navi.innerHTML="Sharing";break;
+   case 3:navi.innerHTML="comunity";break;
+   }
+   navi.style.color="#000000";
+   }
+  main.innerHTML="This site is a <strong>knowledge-sharing portal</strong> for use in school. It allows easy access to learning resources, information sharing, and community."
+  for(let i=0;i<8;i++){
+  var but=document.getElementsByTagName('button')[i];
+   switch(i){
+   
+   case 0:but.innerHTML="Self-Exploration";break;
+   case 1:but.innerHTML="question box";break;
+   case 2:but.innerHTML="waiting time";break;
+   case 3:but.innerHTML="ploblem generation";break;
+   case 4:but.innerHTML="data";break;
+   case 5:but.innerHTML="learnig URL";break;
+   case 6:but.innerHTML="survey";break;
+   case 7:but.innerHTML="JAPAN";break
+      }
+       but.style.color="#000000";
+  
+  }
+  f++;
+  }else{
+   var title= document.getElementsByTagName('h1')[0];
+    var main=document.getElementsByTagName('p')[0];
+    
+   title.innerHTML="学校用知識共有ポータルサイト";
+   title.style.color="#000000";
+  
+   for(let i=0;i<4;i++){
+   var navi= document.getElementsByTagName('a')[i];
+   switch(i){
+   
+   case 0:navi.innerHTML="ホーム";break;
+   case 1:navi.innerHTML="学習リソース";break;
+   case 2:navi.innerHTML="情報共有";break;
+   case 3:navi.innerHTML="コミュニティ";break;
+   }
+   navi.style.color="#000000";
+   }
+  main.innerHTML="このサイトは学校で使用する<strong>知識共有用ポータルサイト</strong>です。学習リソース、情報共有、コミュニティなどを簡単にアクセスできます。"
+  for(let i=0;i<8;i++){
+  var but=document.getElementsByTagName('button')[i];
+   switch(i){
+   
+   case 0:but.innerHTML="自主探求";break;
+   case 1:but.innerHTML="質問箱";break;
+   case 2:but.innerHTML="待ち時間";break;
+   case 3:but.innerHTML="問題作成";break;
+   case 4:but.innerHTML="データ群";break;
+   case 5:but.innerHTML="URL検索";break;
+   case 6:but.innerHTML="アンケート";break;
+   case 7:but.innerHTML="ENGLISH";break
+      }
+       but.style.color="#000000";
+  
+  }
+  f++; 
+  }
+  //ここで言語変換用の関数は終わり
+  
+  
+  
+  
+    }
+    
+  </script>
+</body>
+</html>
