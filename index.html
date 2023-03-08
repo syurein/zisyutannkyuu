@@ -3,6 +3,8 @@
 <head>
     <title>学校用知識共有ポータルサイト</title>
     <style>
+	h1{font-size: 200%;}
+		
         body {
             background-color:#fffacd;
             font-family: sans-serif;
@@ -98,8 +100,7 @@ background-color:#98fb98;
 		width:50px;
 		
 	}
-	fotter
-        
+
     </style>
 </head>
 <body>
@@ -145,17 +146,17 @@ background-color:#98fb98;
     var title= document.getElementsByTagName('h1')[0];
     var main=document.getElementsByTagName('p')[0];
     
-   title.innerHTML="<h1><img  class="img" src="https://1.bp.blogspot.com/-gARR6ehVBP8/UZB6YR-tXBI/AAAAAAAASCo/fZGPc8JEd6w/s400/search_mushimegane.png" alt="">Knowledge Sharing Portal Site for Schools<h1>";
+   title.innerText="Knowledge Sharing Portal Site for Schools";
    title.style.color="#000000";
   
    for(let i=0;i<4;i++){
    var navi= document.getElementsByTagName('a')[i];
    switch(i){
    
-   case 0:navi.innerHTML="home";break;
-   case 1:navi.innerHTML="learning";break;
-   case 2:navi.innerHTML="Sharing";break;
-   case 3:navi.innerHTML="comunity";break;
+   case 0:navi.innerText="home";break;
+   case 1:navi.innerText="learning";break;
+   case 2:navi.innerText="Sharing";break;
+   case 3:navi.innerText="comunity";break;
    }
    navi.style.color="#000000";
    }
@@ -181,7 +182,7 @@ background-color:#98fb98;
    var title= document.getElementsByTagName('h1')[0];
     var main=document.getElementsByTagName('p')[0];
     
-   title.innerHTML="<h1><img  class="img" src="https://1.bp.blogspot.com/-gARR6ehVBP8/UZB6YR-tXBI/AAAAAAAASCo/fZGPc8JEd6w/s400/search_mushimegane.png" alt="">学校用知識共有ポータルサイト<h1>";
+   title.innerHTML="学校用知識共有ポータルサイト";
    title.style.color="#000000";
   
    for(let i=0;i<4;i++){
