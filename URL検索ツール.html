@@ -64,7 +64,7 @@ form{
 <input type="checkbox" name="genre" value="etc">検索BOX：<input type="text" name="text">
 <br>
 <input type="checkbox" name="genre" value="プログラミング">プログラミング
-        <input type="checkbox" name="genre" value="研究">研究
+        <input type="checkbox" name="genre" value="勉強">勉強
         <input type="checkbox" name="genre" value="自主探求">自主探求
         <br>
        <input type="checkbox" name="genre" value="進路">進路
@@ -77,6 +77,7 @@ form{
      <input type="checkbox" name="genre" value="シラバス">シラバス
      <input type="checkbox" name="genre" value="体験談">体験談
     <br>
+    
     
         
         <br>
@@ -108,7 +109,7 @@ form{
     
      case "進路":msg+="卒業生がふりかえる〜進路編〜";links="https://moniponbear.com/kosen_sinro/286/";
      break;
-     case "研究":msg+="国立高専情報共有ポータル";links="https://research.kosen-k.go.jp/";
+       case "研究":msg+="国立高専情報共有ポータル";links="https://research.kosen-k.go.jp/";
      break;
      case "過去問":msg+=""; links="";
      break;
@@ -138,26 +139,29 @@ form{
         
         }else{
             let recommendBooks = {
-                プログラミング: 'progate',
-                自主探求: '自主探求検索ツール',
-                過去問: '『過去問』',
-                進路:'卒業生がふりかえる〜進路編〜',
+                プログラミング: '<a href="https://prog-8.com/dashboard">progate</a>',
+                勉強:'<a href="https://youtube.com/@yobinori">ヨビノリ</a><br><a href="know-star.com">ナレッジスター</a><br><a href="https://www.eiken.or.jp/eiken/">英検</a>',
+                自主探求: '<a href="">自主探求検索ツール</a><br><a href="https://research.kosen-k.go.jp/">国立高専情報共有ポータル</a>',
+                過去問: '<a href="">『過去問』</a>',
+                進路:'<a href="https://moniponbear.com/kosen_sinro/286/">卒業生がふりかえる〜進路編〜</a><br><a href="know-star.com">ナレッジスター</a>',
+                
                 一覧:'',
-                シラバス:'WEBシラバス',
-                研究:'国立高専情報共有ポータル',
-                体験談:'かっつーのユーチューブチャンネル',
+                
+                シラバス:'<a href="https://syllabus.kosen-k.go.jp/Pages/PublicDepartments?school_id=05&lang=ja">WEBシラバス</a><br><a href="https://www.hachinohe-ct.ac.jp/">八戸工業高等専門学校</a>',
+                
+                体験談:'<a href="https://m.youtube.com/channel/UC_MTz4eFIPt2ihuqFk8tMqQ">かっつーのユーチューブチャンネル</a><br><a href="know-star.com">ナレッジスター</a><br><a href="https://youtube.com/@kosen-channel">みんなの高専チャンネル</a>',
             
             
                 
             };
-            let tex=document.getElementsByName('text')[0].value;
             
+           
             
-            
+           
           
-            let msg = 'あなたにおすすめのサイトは、<strong>';
+            let msg = 'あなたにおすすめのサイトは、<br><strong>';
             for (let genre of selectedGenres) {
-                msg += recommendBooks[genre.value] + '、';
+                msg += recommendBooks[genre.value] + '<br>';
             }
             
             msg += '</strong>です！';
