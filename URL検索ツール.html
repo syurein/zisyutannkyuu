@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +21,10 @@ form{
   font-family:serif;
   font-weight:600;
 }
-.text{
+.en{
+  font-size:110%;
+}
+.text1{
   background-color:#efe446;
   
 }
@@ -36,7 +40,7 @@ form{
 .button1{
    background-color:#adff2f;
    border-color:#adff2f;
-   border-radius:10px;
+   border-radius:5px;
    
   
 }
@@ -55,28 +59,32 @@ form{
 
 </style>
     <h1><center>学習用URL推薦サイト</center></h1>
-    <p><center>あなたに<strong class="text">おすすめの学習サイト</strong>を紹介します。</center></p>
-    <br>
-    <p>学習したいことを<strong>選択/検索</strong>できます。</p>
+    
+    <p><center class="p1">あなたに<strong class="text1">おすすめの学習サイト</strong>を紹介します。</center></p>
+    
+    
+    <p class="tx">学習したいことを<strong>選択/検索</strong>できます。</p>
     <form action="">
     
-<p>あなたの<strong class="text2">興味のあるもの</strong>にチェックしてください。</p>
-<input type="checkbox" name="genre" value="etc">検索BOX：<input type="text" name="text">
+<p class="tn">あなたの<strong class="text2">興味のあるもの</strong>にチェックしてください。</p>
+<div class="button3">
+<input type="checkbox"name="genre" value="etc">検索BOX：<input type="text" name="text">
 <br>
+
 <input type="checkbox" name="genre" value="プログラミング">プログラミング
-        <input type="checkbox" name="genre" value="勉強">勉強
-        <input type="checkbox" name="genre" value="自主探求">自主探求
+    <input type="checkbox"   name="genre" value="勉強">勉強
+        <input type="checkbox"  name="genre" value="自主探求">自主探求
         <br>
        <input type="checkbox" name="genre" value="進路">進路
        
         
        
         <input type="checkbox" name="genre" value="過去問">過去問
-    <input type="checkbox" name="genre" value="英語">英語
+    <input type="checkbox"  name="genre" value="英語">英語
      <input type="checkbox" name="genre" value="一覧">一覧
      <br>
      <input type="checkbox" name="genre" value="シラバス">シラバス
-     <input type="checkbox" name="genre" value="体験談">体験談
+     <input type="checkbox"  name="genre" value="体験談">体験談
     <br>
     
     
@@ -84,10 +92,13 @@ form{
         <br>
     <input class="button"type="button" value="送信" onclick="recomend()";>
          <input type="reset" class="button2">  
+         <input class="button1"type="button" value="ENGLISH" onclick="change()";>
+         </div>
       
     </form>
     <p id="result"></p>
     <script>
+    let count=0;
     var links="";
        function btnPush(){
     location.href=links;
@@ -158,20 +169,62 @@ form{
             };
             
            
-            
+            let msg;
            
-          
-            let msg = 'あなたにおすすめのサイトは、<br><strong>';
+            if(count%2==0){
+            msg = 'あなたにおすすめのサイトは、<br><strong>';
+            }else{
+            msg = 'We  recommend…<br><strong>';
+            }
             for (let genre of selectedGenres) {
                 msg += recommendBooks[genre.value] + '<br>';
             }
+            if(count%2==0){
             
             msg += '</strong>です！';
+            }else{
+             msg += '</strong>to you!';
+            
+            
+            }
          
            let text12=document.getElementById("result");
            text12.innerHTML=msg;
         }
         }
+        }
+         
+        function change(){
+       
+        if(count%2==0){
+        
+        let text=document.getElementsByTagName("h1")[0];
+        text.innerHTML="Learning URL Recommendation Site";
+        text=document.getElementsByClassName("p1")[0];
+        text.innerHTML="<p><center class='en'>It will introduce<br> you to the <strong class='text1'>perfect web site</strong> for you. </center></p>";
+        text=document.getElementsByClassName("tx")[0];
+        text.innerHTML="<p class='tx'>You can <strong>select/search</strong> what you want to learn.</p>"
+        text=document.getElementsByClassName("tn")[0];
+        text.innerHTML="<p class=p1>Check the ones that interest you!</p>";
+         text=document.getElementsByClassName("button3")[0];
+         text.innerHTML='<input type="checkbox"name="genre" value="etc"><input type="checkbox" name="genre" value="プログラミング">programming <input type="checkbox"   name="genre" value="勉強">study<br><input type="checkbox"  name="genre" value="自主探求">independent research<br> <input type="checkbox" name="genre" value="進路">career<input type="checkbox" name="genre" value="過去問">past exam question collection<br><input type="checkbox"  name="genre" value="英語">English <input type="checkbox" name="genre" value="一覧">summary <br> <input type="checkbox" name="genre" value="シラバス">syllabus <input type="checkbox"  name="genre" value="体験談">story of one"s experience<br><br><input class="button"type="button" value="submit" onclick="recomend()";><input type="reset" class="button2" value="RESET">  <input class="button1"type="button" value="日本語" onclick="change()";>';
+        }else{
+         let text=document.getElementsByTagName("h1")[0];
+        text.innerHTML="<center>学習用URL推薦サイト</center>";
+        text=document.getElementsByClassName("en")[0];
+        text.innerHTML="<center class=p1>あなたに<strong class='text1'>おすすめの学習サイト</strong>を紹介します。</center>";
+         text=document.getElementsByClassName("tx")[0];
+        text.innerHTML="<p class=p1>学習したいことを<strong class='text2'>選択/検索</strong>できます。</p>"
+        text=document.getElementsByClassName("tn")[0];
+        text.innerHTML="<p class=p1>あなたの<strong class='text2'>興味のあるもの</strong>にチェックしてください。</p>";
+         text=document.getElementsByClassName("button3")[0];
+         text.innerHTML='<input type="checkbox"name="genre" value="etc">検索BOX：<input type="text" name="text"><br><input type="checkbox" name="genre" value="プログラミング">プログラミング<input type="checkbox"   name="genre" value="勉強">勉強<input type="checkbox"  name="genre" value="自主探求">自主探求<br><input type="checkbox" name="genre" value="進路">進路<input type="checkbox" name="genre" value="過去問">過去問<input type="checkbox"  name="genre" value="英語">英語<input type="checkbox" name="genre" value="一覧">一覧<br><input type="checkbox" name="genre" value="シラバス">シラバス<input type="checkbox"  name="genre" value="体験談">体験談<br><br><input class="button"type="button" value="送信" onclick="recomend()";><input type="reset" class="button2"><input class="button1"type="button" value="ENGLISH" onclick="change()";>'
+               
+        
+        }
+        count++;
+        
+        
         }
        
     </script>
