@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <title>問題提供-home</title>
+        <style>
+            
+            body {
+                  
+                 }
+            header{
+                   font-size:40px;
+                   color:#000;
+                   border: 3px solid lightgreen;
+                   
+                  }
+            main{
+                 font-size:20px;
+                 
+                }
+            pp{
+               font-size:18px;
+                 
+              }
+            ppp{
+               font-size:18px;
+               letter-spacing:0.1em;
+               font-weight:bold;
+               font-family:serif;
+              }
+            article{
+                 font-size:20px;
+                 border: 3px double lightblue;
+                 margin-bottom: 20px;
+                 padding: 10px;
+                 
+                }
+            mini{
+                 font-size:15px;
+                }
+            a{
+                 color:black;
+                 text-decoration:none;
+             }
+            a:hover{
+                    text-decoration:underline;
+                    color:blue;
+                   }
+            deco{
+              color:black;
+              font-family:"ヒラギノ丸ゴ ProN";
+              letter-spacing:0.2em;
+              
+             }
+             
+             
+                   
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <deco><div style="text-align: center">問題出題ツール</div></deco>
+        </header>
+       
+        <main>
+            <div style="text-align: center;">
+                <a href="#Mc">機械</a> | <a href="#Ec">電気</a> | <a href="#Cc">マテリアル</a> | <a href="#Zc">建築</a> | <a href="#All">一般</a>
+            </div>
+            <center>ランダムに問題を出題します。勉強したい教科を指定してください。
+            <mini><a href="">使い方はこちら</a></mini>
+            <br>
+            問題の提供もお待ちしています。<mini><a href="#tk">ここから</a></mini></center>
+            <br>
+            
+        </main>
+        
+        <article id="Mc">
+            <b style="font-family:serif;"><a href="">機械・医工学コース</a></b>
+            <br>
+            <pp>現在出題できる教科は<ppp>教科1</ppp>、<ppp>教科2</ppp> です。</pp>
+        </article>
+        
+         <br><br>
+        <article id="Ec">
+            <b style="font-family:serif;"><a href="">電気情報工学コース</a></b>
+            <br>
+            <pp>現在出題できる教科は<ppp>教科1</ppp>、<ppp>教科2</ppp> です。</pp>
+        </article>
+        
+         <br><br>
+        <article id="Cc">
+        <b style="font-family:serif;"><a href="">マテリアル・バイオ工学コース</a></b>
+            <br>
+            <pp>現在出題できる教科は<ppp>教科1</ppp>、<ppp>教科2</ppp> です。</pp>
+        </article>
+        
+         <br><br>
+        <article id="Zc">
+        <b style="font-family:serif;"><a href="">環境都市・建築デザインコース</a></b>
+            <br>
+            <pp>現在出題できる教科は<ppp>教科1</ppp>、<ppp>教科2</ppp> です。</pp>
+        </article>
+        
+         <br><br>
+        <article id="All">
+        <b style="font-family:serif;"><a　href="">一般科目</a></b>
+            <br>
+            <pp>現在出題できる教科は<ppp>教科1</ppp>、<ppp>教科2</ppp> です。</pp>
+        </article>
+        
+         <br><br><br><br><br>
+         
+      
+         
+        <article id="tk">
+            <deco style=background-color:lightgreen;font-size:30px;>問題の提供</deco>
+            <br>
+            皆さんの投稿で問題のバリエーションが増えます。ぜひ協力してください。
+            <br><br>
+            新しい問題の投稿
+            <form action="#" method="post">
+	          <input type="radio" class="radio" name="Q" value="Mq">機械
+            <input type="radio" class="radio" name="Q" value="Eq">電気
+            <input type="radio" class="radio" name="Q" value="Cq">マテリアル
+            <input type="radio" class="radio" name="Q" value="Zq">建築
+            <input type="radio" class="radio" name="Q" value="Allq">一般
+            </form>
+            <form>
+            <textarea placeholder="ここに入力してください" class="input" cols="40" rows="8"></textarea>
+            <button>
+                送信
+            </button>
+            </form>
+            
+            
+            <br><br><br>
+            新しい教科の投稿
+            <form action="#" method="post">
+	          <input type="radio" class="radio" name="C" value="Mc">機械
+            <input type="radio" class="radio" name="C" value="Ec">電気
+            <input type="radio" class="radio" name="C" value="Cc">マテリアル
+            <input type="radio" class="radio" name="C" value="Zc">建築
+            <input type="radio" class="radio" name="C" value="Allc">一般
+            </form>
+            <form>
+            <textarea placeholder="ここに入力してください" class="input" cols="40" rows="8"></textarea>
+            <button>
+                送信
+            </button>
+            </form>
+            
+            
+            <br><br><br><br><br><br>
+        </article>
+        
+        
+        <style type="text/css">
+        .input {
+                border-radius: 10px;
+                outline: 2px solid lightblue;
+                border: 0;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                background-color: #e2e2e2;
+                outline-offset: 3px;
+                padding: 10px 1rem;
+                transition: 0.25s;
+                }
+
+        .input:focus {
+                      outline-offset: 5px;
+                      background-color: #fff
+                     }
+         summary:-webkit-details-marker {
+        　　　　　　　　　　　　　　　　　　　　　color: red;
+        　　　　　　　　　　　　　　　　　　　　　content: "\25BE";
+        　　　　　　　　　　　　　　　　　　　　　transform: rotate(45deg);
+      　　　　　　　　　　　　　　　　　　　 }  
+         </style>
+        
+        
+        
+    </body>
+</html>
